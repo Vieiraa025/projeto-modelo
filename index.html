@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="css/style.css" />
+  <script src="https://kit.fontawesome.com/bcf462c704.js" crossorigin="anonymous"></script>
+  <title>Ribeirão Preto - Capital do Agronegócio</title>
+  <script>
+    function menuAction() {
+      const x = document.getElementById("menu-master");
+      x.className = x.className === "top-nav" ? "top-nav responsive" : "top-nav";
+    }
+    function hideMenu() {
+      document.getElementById("menu-master").className = "top-nav";
+    }
+  </script>
+</head>
+<body>
+
+  <header>
+    <div class="nav-container">
+      <nav class="top-nav" id="menu-master">
+        <ul>
+          <li><a href="#cidade" onclick="hideMenu()">A Cidade</a></li>
+          <li><a href="#atracoes" onclick="hideMenu()">Atrações</a></li>
+          <li><a href="#historia" onclick="hideMenu()">A História</a></li>
+          <li><a href="#tecnologia" onclick="hideMenu()">Desenvolvimento</a></li>
+          <li><a href="#eventos" onclick="hideMenu()">Eventos</a></li>
+          <li><a href="#sobre" onclick="hideMenu()">Sobre</a></li>
+        </ul>
+        <a href="javascript:void(0);" class="icon" onclick="menuAction()"><i class="fa fa-bars"></i></a>
+      </nav>
+    </div>
+    <div class="container-banner">
+      <div class="text-banner">
+        <span class="text-banner-small">Conheça</span><br />
+        Ribeirão Preto
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section id="cidade">
+      <h1 class="default">Bem-vindo a Ribeirão Preto</h1>
+      <p>
+        Ribeirão Preto, localizada no interior do estado de São Paulo, é uma cidade vibrante, moderna e com forte vocação econômica para o agronegócio. Conhecida por sua vida cultural, infraestrutura urbana de qualidade e tradição universitária, encanta moradores e visitantes.
+      </p>
+    </section>
+
+    <section id="atracoes">
+      <h1 class="default">Atrações</h1>
+      <p>Ribeirão Preto oferece pontos turísticos históricos, culturais e de lazer para todas as idades.</p>
+      <div class="atracoes-conteudo">
+        <div>
+          <img src="img/theatro-pedro-ii.jpg" alt="Theatro Pedro II" title="Theatro Pedro II" />
+        </div>
+        <div>
+          <ul>
+            <li>Theatro Pedro II</li>
+            <li>Parque Municipal Dr. Luis Carlos Raya</li>
+            <li>Choperia Pinguim</li>
+            <li>Palácio Rio Branco</li>
+            <li>Praça XV de Novembro</li>
+            <li>Morro do São Bento</li>
+            <li>Jardim Japonês</li>
+            <li>Parque Curupira</li>
+            <li>Shopping Santa Úrsula</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="historia">
+      <h1 class="default">A História</h1>
+      <div class="historia-conteudo">
+        <div>
+          <figure>
+            <img src="img/fundadores.jpg" alt="Fundadores da cidade" title="Fundadores de Ribeirão Preto" />
+            <figcaption>Fundadores da cidade</figcaption>
+          </figure>
+          <p>
+            Ribeirão Preto foi fundada em 1856, se desenvolvendo rapidamente devido à cultura cafeeira. Tornou-se um polo regional de desenvolvimento econômico, com forte influência no setor agrícola.
+          </p>
+        </div>
+        <div>
+          <figure>
+            <img src="img/avenida-antiga.jpg" alt="Avenida antiga de Ribeirão Preto" title="Vista antiga" />
+            <figcaption>Vista antiga da cidade</figcaption>
+          </figure>
+          <p>
+            A cidade prosperou com o ciclo do café, tornando-se um centro comercial importante. No século XX, diversificou sua economia, destacando-se também na indústria e serviços.
+          </p>
+        </div>
+        <div>
+          <figure>
+            <img src="img/igreja-matriz.jpg" alt="Igreja Matriz de Ribeirão Preto" title="Igreja Matriz" />
+            <figcaption>Igreja Matriz</figcaption>
+          </figure>
+          <p>
+            Hoje, Ribeirão Preto é reconhecida como um dos principais polos urbanos do interior do Brasil, com destaque para sua qualidade de vida e oferta educacional.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="tecnologia">
+      <div class="tecnologia-conteudo">
+        <div class="tecnologia-texto-overlay">
+          <h1 class="default">Desenvolvimento</h1>
+          <p><strong>Ribeirão Preto é um polo universitário e referência em tecnologia no agronegócio.</strong></p>
+          <p><i class="fa fa-check"></i> Campus da USP - com destaque para medicina, direito e economia.</p>
+          <p><i class="fa fa-check"></i> Faculdade Barão de Mauá e UNAERP - instituições de ensino superior consolidadas.</p>
+          <p><i class="fa fa-check"></i> Centro de Pesquisa em Genoma e Biotecnologia aplicada ao agro.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="eventos">
+      <h1 class="default">Eventos</h1>
+      <div class="eventos-conteudo">
+        <div>
+          <figure>
+            <img src="img/agrishow.jpg" alt="Agrishow" title="Agrishow" />
+            <figcaption>
+              <span class="evento-titulo">Agrishow</span>
+              Maior feira de tecnologia agrícola da América Latina.
+            </figcaption>
+          </figure>
+        </div>
+        <div>
+          <figure>
+            <img src="img/joao-rock.jpg" alt="João Rock" title="João Rock" />
+            <figcaption>
+              <span class="evento-titulo">João Rock</span>
+              Festival de música nacional que reúne milhares de pessoas todo ano.
+            </figcaption>
+          </figure>
+        </div>
+        <div>
+          <figure>
+            <img src="img/feira-livro.jpg" alt="Feira do Livro" title="Feira do Livro" />
+            <figcaption>
+              <span class="evento-titulo">Feira do Livro</span>
+              Evento literário e cultural gratuito no centro da cidade.
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section id="sobre">
+      <div class="sobre-conteudo">
+        <div class="sobre-texto-overlay">
+          <h1 class="titulo-sobre">Sobre</h1>
+          <p>Este site foi criado com o objetivo de compartilhar informações e curiosidades sobre Ribeirão Preto, celebrando sua história, cultura e desenvolvimento.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    2025 &copy; Ribeirão Preto - Todos os direitos reservados
+  </footer>
+
+</body>
+</html>

@@ -1,0 +1,281 @@
+/* CSS - Projeto Ribeirão Preto */
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Noto Sans', sans-serif;
+    background-color: #fdfdfd;
+}
+
+header {
+    width: 100%;
+}
+
+/* Top Menu */
+.nav-container {
+    background-color: #1F71BA;
+    position: fixed;
+    text-align: center;
+    height: 50px;
+    width: 100%;
+    z-index: 1000;
+}
+
+.top-nav {
+    display: inline-block;
+    max-width: 992px;
+    width: 100%;
+}
+
+.top-nav ul {
+    margin: 0;
+    padding: 0;
+    text-align: right;
+}
+
+.top-nav ul li {
+    display: inline-block;
+}
+
+.top-nav ul li a {
+    display: inline-block;
+    padding: 16px 10px;
+    font-weight: bold;
+    font-size: 1em;
+    width: 120px;
+    text-align: center;
+    color: #fff;
+    text-decoration: none;
+    text-shadow: 1px 1px 1px #333;
+    transition: color 0.3s;
+    box-sizing: border-box;
+}
+
+ul li a:hover {
+    color: #D2E28B;
+    text-decoration: underline 2px;
+}
+
+.top-nav a.icon {
+    color: #fff;
+    display: none;
+    font-size: 24px;
+    position: absolute;
+    right: 20px;
+    top: 12px;
+}
+
+@media screen and (max-width: 768px) {
+    .top-nav li:not(:last-child) {
+        display: none;
+    }
+
+    .top-nav a.icon {
+        display: block;
+    }
+
+    .top-nav.responsive {
+        background-color: #ccc;
+        position: relative;
+    }
+
+    .top-nav.responsive ul {
+        margin-top: 50px;
+    }
+
+    .top-nav.responsive li {
+        display: block;
+        text-align: center;
+        line-height: 15px;
+        border-top: 1px solid #aaa;
+    }
+
+    .top-nav.responsive li a {
+        color: #000;
+        width: 100%;
+        text-shadow: none;
+    }
+
+    .top-nav.responsive li a:hover {
+        color: #fff;
+        background-color: #333;
+    }
+}
+
+.container-banner {
+    height: 400px;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/banner-ribeirao.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+}
+
+.text-banner {
+    font-size: 64px;
+    text-shadow: 2px 2px 4px #000;
+    text-align: left;
+    width: 100%;
+    max-width: 992px;
+    padding: 60px 30px;
+}
+
+.text-banner-small {
+    font-size: 36px;
+}
+
+main {
+    padding-top: 60px;
+    width: 100%;
+    text-align: center;
+}
+
+section {
+    max-width: 992px;
+    margin: auto;
+    padding: 20px;
+    text-align: left;
+}
+
+h1.default {
+    color: #1F71BA;
+    padding-top: 30px;
+}
+
+h1.titulo-sobre {
+    color: #fff;
+    padding-top: 30px;
+}
+
+p {
+    color: #444;
+    font-size: 1em;
+    line-height: 1.6;
+    text-align: justify;
+}
+
+.atracoes-conteudo,
+.historia-conteudo,
+.eventos-conteudo {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: space-evenly;
+}
+
+.atracoes-conteudo > div,
+.historia-conteudo > div,
+.eventos-conteudo > div {
+    flex: 1 1 300px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.atracoes-conteudo img,
+.historia-conteudo img,
+.eventos-conteudo img {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 10px;
+}
+
+.atracoes-conteudo ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.atracoes-conteudo ul li::before {
+    content: '✓ ';
+    color: #28a745;
+    font-weight: bold;
+}
+
+/* Modificações para a seção de tecnologia para resolver a sobreposição */
+.tecnologia-conteudo {
+    background: url("../img/agronegocio-bg.jpg") no-repeat center center;
+    background-size: cover;
+    background-attachment: fixed;
+    padding: 0; /* Removido o padding direto aqui para ser aplicado no overlay */
+    color: #fff;
+    display: flex; /* Adicionado para centralizar o conteúdo */
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+    min-height: 400px; /* Garante uma altura mínima para ver o background */
+}
+
+/* Nova regra para o overlay do texto na seção de tecnologia */
+.tecnologia-texto-overlay {
+    background-color: rgba(0, 0, 0, 0.6); /* Fundo preto semitransparente */
+    padding: 40px 20px; /* Adicionado o padding aqui para o espaçamento do texto */
+    max-width: 992px; /* Limita a largura do texto */
+    width: 100%; /* Garante que ocupe a largura disponível */
+    box-sizing: border-box; /* Inclui padding e borda na largura total */
+    text-align: left; /* Alinha o texto à esquerda dentro do overlay */
+}
+
+.tecnologia-conteudo h1.default {
+    color: #fff; /* Garante que o título seja branco sobre o overlay */
+    padding-top: 0; /* Remove o padding-top desnecessário aqui */
+}
+
+.tecnologia-conteudo p {
+    color: #fff; /* Garante que o parágrafo seja branco sobre o overlay */
+    margin-bottom: 10px;
+    font-size: 1.1em;
+    text-align: left; /* Garante que o texto fique alinhado à esquerda */
+}
+
+.evento-titulo {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+/* Modificações para a seção "Sobre" para resolver a sobreposição */
+#sobre {
+    background: url("../img/sobre-ribeirao.jpg") no-repeat center center;
+    background-size: cover;
+    background-attachment: fixed;
+    color: #fff;
+    padding: 0; /* Removido o padding direto aqui para ser aplicado no overlay */
+    display: flex; /* Adicionado para centralizar o conteúdo */
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center; /* Centraliza verticalmente */
+    min-height: 300px; /* Garante uma altura mínima para ver o background */
+}
+
+/* Nova regra para o overlay do texto na seção "Sobre" */
+.sobre-texto-overlay {
+    background-color: rgba(0, 0, 0, 0.6); /* Fundo preto semitransparente */
+    padding: 60px 20px; /* Adicionado o padding aqui para o espaçamento do texto */
+    max-width: 992px; /* Limita a largura do texto */
+    width: 100%; /* Garante que ocupe a largura disponível */
+    box-sizing: border-box; /* Inclui padding e borda na largura total */
+    text-align: left; /* Alinha o texto à esquerda dentro do overlay */
+}
+
+.sobre-conteudo h1.titulo-sobre {
+    color: #fff; /* Garante que o título seja branco sobre o overlay */
+    padding-top: 0; /* Removido o padding-top desnecessário aqui */
+}
+
+.sobre-conteudo p {
+    color: #fff; /* Garante que o parágrafo seja branco sobre o overlay */
+    font-style: italic;
+    text-align: left; /* Garante que o texto fique alinhado à esquerda */
+}
+
+footer {
+    background-color: #343434;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+    font-size: 0.9em;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
