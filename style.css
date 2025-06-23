@@ -279,3 +279,74 @@ footer {
     font-size: 0.9em;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
+/* Melhorias gerais de layout */
+img {
+    display: block;
+    margin: 0 auto;
+    height: auto;
+}
+
+/* Figcaption estilizado */
+figure {
+    margin: 0;
+    padding: 0;
+}
+
+figcaption {
+    font-size: 0.95em;
+    margin-top: 8px;
+    color: #555;
+    text-align: center;
+}
+
+/* Ajuste extra de responsividade para imagens */
+@media screen and (max-width: 600px) {
+    .text-banner {
+        font-size: 36px;
+        padding: 30px 15px;
+    }
+
+    .text-banner-small {
+        font-size: 24px;
+    }
+
+    .tecnologia-texto-overlay,
+    .sobre-texto-overlay {
+        padding: 30px 15px;
+    }
+
+    .top-nav ul {
+        text-align: center;
+    }
+}
+
+/* Efeito sutil nas imagens */
+img {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+img:hover {
+    transform: scale(1.03);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Botão estilo menu (responsivo) */
+.top-nav a.icon:hover {
+    color: #D2E28B;
+    cursor: pointer;
+}
+
+/* Ajustes para listas dentro de seções */
+section ul {
+    padding-left: 20px;
+    list-style-type: disc;
+}
+
+section ul li {
+    margin-bottom: 6px;
+}
+
+/* Suavidade nas transições */
+* {
+    transition: all 0.2s ease-in-out;
+}
